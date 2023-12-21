@@ -69,6 +69,12 @@ function App() {
       title: "060746606",
     },
   ];
+  const Projects = [
+    { id: 1, img: { Ecom1 } },
+    { id: 2, img: { Ecom2 } },
+    { id: 3, img: { Ecom3 } },
+  ];
+
   const [open, setOpen] = useState(false);
 
   const handleToggleMenu = () => {
@@ -76,14 +82,14 @@ function App() {
   };
 
   return (
-    <div className="bg-[#273C75] text-white 2xl:px-20  ">
-      <nav className="flex justify-center sticky top-0 bg-[#273C75] shadow-sm">
-        <div className="lg:flex lg:h-[70px] md:h-full items-center text-[20px] w-full justify-center">
+    <div className="bg-[#273C75] text-white lg:px-20 md:px-10 sm:px-8 ">
+      <nav className="flex justify-center sticky top-0 bg-[#273C75] shadow-sm  py-2">
+        <div className="lg:flex lg:h-[70px] md:h-full  items-center text-[20px] w-full justify-center ">
           <div className="lg:w-1/2 md:h-[60px] font-serif flex items-center md:item-center sm:items-center uppercase">
             koch solach
           </div>
           <div
-            className="md:text-xl md:absolute md:right-5 md:top-4 md:cursor-pointer lg:hidden"
+            className=" lg:hidden md:text-xl  md:absolute md:right-0 md:top-4 md:cursor-pointer sm:text-md sm:absolute sm:right-0 sm:top-2"
             onClick={handleToggleMenu}
           >
             <FaBars size={25} color="#fff" name={open ? "close" : "menu"} />
@@ -98,9 +104,9 @@ function App() {
         </div>
       </nav>
       {/* Home section */}
-      <section className="flex justify-center ">
-        <div className="flex justify-between flex-wrap lg:py-10 md:py-4 ">
-          <div className="lg:py-14 md:py-7  w-1/2 ">
+      <section>
+        <div className="lg:flex lgjustify-between md:flex md:justify-between w-full  lg:py-10 md:py-4  ">
+          <div className="lg:py-14 md:py-7  w-full  ">
             <p className="text-xl">Hello</p>
             <p className="lg:text-[40px] md:text-[30px] font-bold">I'm Solach</p>
             <p className="lg:text-[25px] md:text-[20 px]">
@@ -108,34 +114,34 @@ function App() {
               Interface website.
             </p>
             <div className="my-8 flex space-x-2">
-              <p className="h-12 w-12 text-black text-center pt-2.5 bg-white rounded-full">H</p>
-              <p className="h-12 w-12 text-black text-center pt-2.5 bg-white rounded-full">P</p>
-              <p className="h-12 w-12 text-black text-center pt-2.5 bg-white rounded-full">K</p>
+              <p className="h-12 w-12 text-black text-center pt-2.5 bg-white rounded-full">FB</p>
+              <p className="h-12 w-12 text-black text-center pt-2.5 bg-white rounded-full">In</p>
+              <p className="h-12 w-12 text-black text-center pt-2.5 bg-white rounded-full">Te</p>
 
-              <p className="h-12 w-12 text-black text-center pt-2.5 bg-white rounded-full">X</p>
+              <p className="h-12 w-12 text-black text-center pt-2.5 bg-white rounded-full">Git</p>
             </div>
-            {/* <button className="bg-[#D9D9D9] text-black px-4 py-2 rounded-md mt-5">
+            <button className="bg-[#D9D9D9] text-black px-4 py-2 rounded-md mt-5">
               Download CV
-            </button> */}
+            </button>
           </div>
-          <div className=" w-1/2 text-end  flex justify-end ">
+          <div className="hidden md:block lg:block w-full ">
             <img
               src={Me}
-              className="lg:h-[600px] lg:w-[600px] md:w-[400px] md:h-[400px] rounded-full object-cover  "
+              className="lg:h-[600px] lg:w-[600px] md:w-[400px] md:h-[400px] rounded-full object-cover"
               alt=""
             />
           </div>
         </div>
       </section>
       {/* Skill */}
-      <section className="flex justify-center  ">
-        <div className="lg:py-10 md:py-4  ">
+      <section className="flex  w-full ">
+        <div className="lg:py-10 md:py-4 w-full ">
           <h1 className="text-center text-[40px] font-bold ">Skills</h1>
-          <div className="  flex  flex-wrap border justify-center">
+          <div className="  grid lg:grid-cols-3 md:grid-cols-2  lg:gap-8 md:gap-5 sm:gap-2 ">
             {Skills.map((item, id) => (
-              <div className="flex space-x-2 w-[400px] m-5 border" key={id}>
+              <div className="flex  w-full " key={id}>
                 <div className=" object-cover">{item.img}</div>
-                <div className="w-full">
+                <div className="w-full ">
                   <div className="flex justify-between">
                     <p className="uppercase font-bold">{item.title}</p>
                     <p>{item.value}%</p>
@@ -151,23 +157,23 @@ function App() {
       </section>
       {/* About section */}
       <section className="flex justify-center">
-        <div className="flex justify-between lg:py-10 md:py-4">
-          <div className=" w-1/2 text-end  ">
+        <div className="flex justify-between lg:py-10  md:py-4">
+          <div className="  text-end  w-full hidden md:block lg:block ">
             <img
               src={About}
-              className="lg:h-[600px] lg:w-[600px] md:w-[300px] md:h-[300px] rounded-full object-cover "
+              className="lg:h-[600px] lg:w-[600px] md:w-[400px] md:h-[400px] rounded-full object-cover "
               alt=""
             />
           </div>
-          <div className="lg:py-14  w-1/2 ">
-            <p className="text-4xl font-bold">About Me</p>
-            <p className="text-xl py-4 font-bold">Frontend Developer</p>
-            <p className="text-[20px]">
+          <div className="lg:py-14 md:py-6  w-full">
+            <p className="lg:text-4xl md:text-3xl font-bold">About Me</p>
+            <p className="lg:text-xl md:text-lg lg:py-4 md:py-2 font-bold">Frontend Developer</p>
+            <p className="lg:text-[20px] md:text-lg">
               I’m a skilled frontend developer with over 3 months of experience in the industry. My
               passion lies creating captivating website designs and implementing them through
               frontend development.
             </p>
-            <div className="py-2.5 text-xl font-bold flex-row space-y-3">
+            <div className=" py-2.5 lg:text-xl md:text-md font-bold flex-row space-y-3">
               <p>Name: KOCH SOLACH</p>
               <p>Date of Birth: 15 Feb 2001</p>
               <p>Address: Takeo Province </p>
@@ -180,18 +186,20 @@ function App() {
       <section className="flex justify-center ">
         <div className=" w-[1300px] ">
           <h1 className="text-center text-[30px] py-10 font-bold">Our project</h1>
-          <div className="flex justify-between flex-wrap sm:p-2">
-            <img src={Ecom1} alt="" className="w-[400px] h-[200px] object-cover rounded-md" />
-            <img src={Ecom2} alt="" className="w-[400px] h-[200px] object-cover rounded-md" />
-            <img src={Ecom3} alt="" className="w-[400px] h-[200px] object-cover rounded-md" />
+          <div className="  grid lg:grid-cols-3 md:grid-cols-2  lg:gap-8 md:gap-5 sm:gap-2 ">
+            {Projects.map((item) => (
+              <div key={item.id}>
+                <img src={item.img} alt={`Project ${item.id}`} />
+              </div>
+            ))}
           </div>
         </div>
       </section>
       {/* Contact me */}
-      <section className="flex justify-center sm:px-10 ">
-        <div className=" w-[1300px] ">
-          <h1 className="text-center text-[40px] font-bold my-5">Contact</h1>
-          <div className="  my-5">
+      <section className="py-10">
+        <div className=" w-full">
+          <h1 className="text-center text-[40px] font-bold my-5 py-5">Contact</h1>
+          <div className="  ">
             {/* <div className="w-1/2">
               <form>
                 <div className="flex-row space-y-5">
@@ -224,11 +232,11 @@ function App() {
                 </div>
               </form>
             </div> */}
-            <div className="  flex  flex-wrap border  ">
+            <div className="grid lg:grid-cols-3 lg:gap-14  md:grid-cols-2 md:gap-5 sm:grid-cols-1 sm:gap-4   ">
               {Contacts.map((item, id) => (
-                <div className="flex space-x-2 w-[380px] m-5 border " key={id}>
+                <div className="flex w-full  space-x-2  " key={id}>
                   <p>{item.icon}</p>
-                  <a href={item.title} className="cursor-pointer pl-3">
+                  <a href={item.title} className="cursor-pointer">
                     {item.title}
                   </a>
                 </div>
@@ -237,7 +245,7 @@ function App() {
           </div>
         </div>
       </section>
-      <footer className="h-[50px]">
+      <footer className="h-full w-full p-5">
         <div className="text-center items-center flex justify-center">
           <hr className="w-96 border " />
         </div>
