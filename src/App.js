@@ -124,8 +124,8 @@ function App() {
         </div>
       </nav>
       {/* Home section */}
-      <section id="home" className="pt-[68px] lg:px-20 md:px-8  xs:px-5 ">
-        <div className="lg:flex lgjustify-between md:flex md:justify-between w-full   md:py-4  ">
+      <section id="home" className="lg:pt-[68px] lg:px-20 md:px-8  xs:px-5 ">
+        <div className="lg:flex lgjustify-between md:flex md:justify-between w-full   md:py-4 ">
           <div className="lg:py-6 md:py-2 w-full  ">
             <p className="lg:text-5xl md:text-3xl xs:text-2xl">Hello</p>
             <p className="lg:text-5xl md:text-[30px] xs:text-[30px] font-bold lg:my-4">
@@ -138,12 +138,12 @@ function App() {
             <div className="lg:my-8 md:my-4 xs:my-4 flex space-x-3">
               {SM.map((item, id) => (
                 <div key={id}>
-                  <p className="lg:text-6xl  xs:text-3xl rounded-full">{item.img}</p>
+                  <p className="lg:text-5xl  xs:text-3xl rounded-full">{item.img}</p>
                 </div>
               ))}
             </div>
             <button
-              className="bg-[#fff] lg:text-[18px] md:text-sm xs:text-xs text-black font-bold lg:px-4 xs:px-2 lg:py-2 xs:py-2 rounded-md lg:mt-5 xs:mt-2"
+              className="bg-[#fff] lg:text-[18px] md:text-sm xs:text-xs text-black font-bold lg:px-4 xs:px-2 lg:py-3 xs:py-2 rounded-md lg:mt-5 xs:mt-2"
               onClick={handleDownload}
             >
               Download CV
@@ -191,16 +191,16 @@ function App() {
             />
           </div>
           <div className="lg:py-14 md:py-6  w-full">
-            <p className="lg:text-4xl md:text-3xl xs:text-[30px] font-bold">About Me</p>
-            <p className="lg:text-xl md:text-2xl xs:text-xl lg:py-4 md:py-2 font-bold">
+            <p className="lg:text-5xl md:text-3xl xs:text-[30px] font-bold">About Me</p>
+            <p className="lg:text-2xl md:text-2xl xs:text-xl lg:py-4 md:py-2 font-bold">
               Frontend Developer
             </p>
-            <p className="lg:text-[20px] md:text-lg xs:text-[18px]">
+            <p className="lg:text-2xl md:text-lg xs:text-[18px]">
               I’m a skilled frontend developer with over 3 months of experience in the industry. My
               passion lies creating captivating website designs and implementing them through
               frontend development.
             </p>
-            <div className="xs:hidden md:block lg:block py-2.5 lg:text-xl md:text-md font-bold flex-row space-y-3 sm:text-[20px]">
+            <div className="lg:text-xl xs:hidden md:block lg:block py-2.5  md:text-md font-bold flex-row space-y-3 sm:text-[20px]">
               <p>Name: KOCH SOLACH</p>
               <p>Date of Birth: 15 Feb 2001</p>
               <p>Address: Takeo Province </p>
@@ -210,13 +210,13 @@ function App() {
         </div>
       </section>
       {/* Our project */}
-      <section className="flex  lg:px-20 md:px-8  xs:px-5 " id="projects">
-        <div className=" w-[1300px] ">
-          <h1 className="text-center text-[30px]  xs:text-[30px] py-10 font-bold">Our project</h1>
+      <section className="flex lg:pt-7  lg:px-20 md:px-8  xs:px-5 " id="projects">
+        <div>
+          <h1 className="text-center lg:text-4xl  xs:text-[30px] py-10 font-bold">Projects</h1>
           <div className="  grid lg:grid-cols-3 md:grid-cols-2  lg:gap-8 md:gap-5 xs:gap-3 ">
             {Projects.map((item) => (
               <div key={item.id}>
-                <img src={item.img} alt={`Project ${item.id}`} className="rounded-[5px] "/>
+                <img src={item.img} alt={`Project ${item.id}`} className="rounded-[5px] " />
               </div>
             ))}
           </div>
